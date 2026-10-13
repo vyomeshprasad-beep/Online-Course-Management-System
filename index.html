@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Course Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            margin: 30px auto;
+            width: 80%;
+        }
+
+        .course {
+            background: white;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            width: 220px;
+            box-shadow: 0 2px 5px #ccc;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #217dbb;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 15px;
+            background: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Online Course Management System</h1>
+        <p>Learn new skills online</p>
+    </header>
+
+    <div class="container">
+        <h2>Available Courses</h2>
+
+        <div class="course">
+            <h3>HTML & CSS</h3>
+            <p>Learn website development.</p>
+            <button onclick="alert('HTML & CSS course selected!')">
+                Enroll
+            </button>
+        </div>
+
+        <div class="course">
+            <h3>Python</h3>
+            <p>Learn Python programming.</p>
+            <button onclick="alert('Python course selected!')">
+                Enroll
+            </button>
+        </div>
+
+        <div class="course">
+            <h3>JavaScript</h3>
+            <p>Learn interactive web design.</p>
+            <button onclick="alert('JavaScript course selected!')">
+                Enroll
+            </button>
+        </div>
+
+        <h2>Project Operations</h2>
+
+        <button onclick="cloneCourse()">Clone</button>
+        <button onclick="forkCourse()">Fork</button>
+        <button onclick="resetPage()">Reset</button>
+
+        <p id="message"></p>
+    </div>
+
+    <footer>
+        <p>Online Course Management System &copy; 2026</p>
+    </footer>
+
+    <script>
+        function cloneCourse() {
+            document.getElementById("message").innerText =
+                "Course cloned successfully!";
+        }
+
+        function forkCourse() {
+            document.getElementById("message").innerText =
+                "A new course copy has been created!";
+        }
+
+        function resetPage() {
+            document.getElementById("message").innerText = "";
+        }
+    </script>
+
+</body>
+</html>
